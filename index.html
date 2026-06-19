@@ -1,0 +1,107 @@
+INSERT INTO packages (id, package_name, slug, price, duration, hero_image, overview)
+VALUES
+(
+2,
+'6 Days Tanzania Mid-Range Safari',
+'6-days-tanzania-midrange-safari',
+'1850',
+'6 Days / 5 Nights',
+'images/hero2.webp',
+'This 6-day journey takes you through Tarangire National Park, Serengeti\'s endless plains, and the Ngorongoro Crater.
+You will experience abundant wildlife, exceptional landscapes, and comfortable mid-range lodges throughout your adventure.'
+);
+
+
+
+
+
+INSERT INTO package_itinerary (package_id, day_number, day_title, day_description, image_one, image_two)
+VALUES
+-- DAY 1
+(2, 1, 'Arrival in Arusha',
+ 'Arrive at Kilimanjaro International Airport where our guide will transfer you to your lodge in Arusha. Relax, refresh, and prepare for the safari adventure ahead.',
+ 'images/day1a.webp', 'images/day1b.webp'),
+
+-- DAY 2
+(2, 2, 'Tarangire National Park – Game Drive',
+ 'After breakfast, drive to Tarangire National Park, famous for its large elephant herds and towering baobab trees. Enjoy a full-day game drive before heading to your lodge.',
+ 'images/day2a.webp', 'images/day2b.webp'),
+
+-- DAY 3
+(2, 3, 'Serengeti National Park',
+ 'Embark on a scenic drive to Serengeti National Park with game viewing en route. In the afternoon, continue wildlife viewing in the endless plains of Serengeti.',
+ 'images/day3a.webp', 'images/day3b.webp'),
+
+-- DAY 4
+(2, 4, 'Full-Day Serengeti Safari',
+ 'Spend a full day exploring Serengeti. Search for lions, leopards, cheetahs, elephants, buffalo, giraffes, and the vast abundance of wildlife that makes the park world famous.',
+ 'images/day4a.webp', 'images/day4b.webp'),
+
+-- DAY 5
+(2, 5, 'Ngorongoro Crater Tour',
+ 'After an early breakfast, descend 600 meters into the world’s largest intact caldera. The Ngorongoro Crater offers exceptional wildlife viewing including rhinos, lions, hippos, and flamingos.',
+ 'images/day5a.webp', 'images/day5b.webp'),
+
+-- DAY 6
+(2, 6, 'Departure',
+ 'Drive back to Arusha for your onward flight. Depending on your schedule, you may enjoy a city tour or local market visit.',
+ 'images/day6a.webp', 'images/day6b.webp');
+ 
+ 
+ 
+ 
+ 
+ INSERT INTO package_exclusions (package_id, item)
+VALUES
+(2, 'International flights to and from Tanzania'),
+(2, 'Personal travel insurance'),
+(2, 'Tips for guides, drivers, and lodge staff'),
+(2, 'Alcoholic and premium beverages'),
+(2, 'Optional activities not included in the itinerary'),
+(2, 'Visa fees for entry into Tanzania'),
+(2, 'Laundry services unless provided by the lodge'),
+(2, 'Souvenirs and personal expenses');
+
+
+
+
+
+UPDATE packages 
+SET 
+country='Tanzania',
+category='Safari',
+days=9,
+budget_type='Luxury'
+WHERE id=1;
+
+UPDATE packages 
+SET 
+country='Tanzania',
+category='Safari',
+days=6,
+budget_type='Mid-range'
+WHERE id=2;
+
+UPDATE packages 
+SET 
+country='Tanzania',
+category='Safari',
+days=8,
+budget_type='Mid-range'
+WHERE id=3;
+
+
+
+
+
+UPDATE packages 
+SET highlights = 'Big Five game drives|Luxury safari lodges|Professional safari guide'
+WHERE id = 1;
+
+UPDATE packages 
+SET highlights = 'Serengeti adventure|Mid-range accommodation|Ngorongoro experience'
+WHERE id = 2;
+
+UPDATE packages 
+SET highlights = 'Extended wildlife safari|Tarangire elephants|Custom safari itinerary'
+WHERE id = 3;
